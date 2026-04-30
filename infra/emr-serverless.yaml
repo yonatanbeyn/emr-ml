@@ -74,27 +74,12 @@ Resources:
       MaximumCapacity:
         Cpu: 20vCPU
         Memory: 80GB
-        Disk: 100GB
-      InitialCapacity:
-        - Key: Driver
-          Value:
-            WorkerCount: 1
-            WorkerConfiguration:
-              Cpu: 2vCPU
-              Memory: 4GB
-              Disk: 20GB
-        - Key: Executor
-          Value:
-            WorkerCount: 2
-            WorkerConfiguration:
-              Cpu: 2vCPU
-              Memory: 4GB
-              Disk: 20GB
+        Disk: 200GB
       AutoStartConfiguration:
         Enabled: true
       AutoStopConfiguration:
         Enabled: true
-        IdleTimeoutMinutes: 15  # Stop billing after 15 min idle
+        IdleTimeoutMinutes: 15
       Tags:
         - Key: Environment
           Value: !Ref Environment
