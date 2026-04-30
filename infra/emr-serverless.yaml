@@ -72,24 +72,24 @@ Resources:
       ReleaseLabel: !Ref ReleaseLabel
       Type: SPARK
       MaximumCapacity:
-        Cpu: 200vCPU
-        Memory: 800GB
-        Disk: 1000GB
+        Cpu: 20vCPU
+        Memory: 80GB
+        Disk: 100GB
       InitialCapacity:
         - Key: Driver
           Value:
             WorkerCount: 1
             WorkerConfiguration:
-              Cpu: 4vCPU
-              Memory: 16GB
-              Disk: 30GB
+              Cpu: 2vCPU
+              Memory: 4GB
+              Disk: 20GB
         - Key: Executor
           Value:
-            WorkerCount: 4
+            WorkerCount: 2
             WorkerConfiguration:
-              Cpu: 4vCPU
-              Memory: 16GB
-              Disk: 30GB
+              Cpu: 2vCPU
+              Memory: 4GB
+              Disk: 20GB
       AutoStartConfiguration:
         Enabled: true
       AutoStopConfiguration:
