@@ -87,7 +87,8 @@ public class PredictiveMaintenancePipeline {
     static Pipeline buildPipeline() {
         VectorAssembler assembler = new VectorAssembler()
             .setInputCols(FEATURE_COLS)
-            .setOutputCol("raw_features");
+            .setOutputCol("raw_features")
+            .setHandleInvalid("skip");
 
         StandardScaler scaler = new StandardScaler()
             .setInputCol("raw_features")
